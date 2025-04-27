@@ -22,7 +22,7 @@ export const Reducer = (state, action) => {
                 // players - array of player names
                 players: action.payload,
             };
-  
+
         case "ADD_FRAME_SCORE":
         // Action: { playerIndex, frameIndex, score }
         const updatedPlayers = [...state.players];

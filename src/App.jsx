@@ -1,15 +1,19 @@
-import React from 'react'
-import './App.css'
-import AddPlayersTest from './components/AddPlayersTest'
+import React from 'react';
+import './App.css';
+import { GameProvider } from './context/GameContext'; // << IMPORT THIS
+import AddPlayersTest from './components/AddPlayersTest';
+import Gameboard from './components/Gameboard';
 
 function App() {
-
   return (
-    <div>
-      <h1>Bowling Score Keeper</h1>
-      <AddPlayersTest />
-    </div>
-  )
+    <GameProvider> {/* << WRAP EVERYTHING INSIDE */}
+      <div>
+        <h1>Bowling Score Keeper</h1>
+        <AddPlayersTest />
+        <Gameboard />
+      </div>
+    </GameProvider>
+  );
 }
 
 export default App;

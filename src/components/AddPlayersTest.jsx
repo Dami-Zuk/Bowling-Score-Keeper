@@ -1,8 +1,10 @@
 import React, { useReducer, useState } from "react";
 import { Reducer, initialState } from "../reducers/Reducer.jsx";
+//import { useGameContext } from "../context/GameContext.jsx";
 
 function AddPlayersTest() {
   const [state, dispatch] = useReducer(Reducer, initialState);
+  //const [state, dispatch] = useGameContext(); We should be using this global reducer we habe in GameContext
 
   const [input, setInput] = useState("");
   const [playerList, setPlayerList] = useState([]);
